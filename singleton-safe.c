@@ -7,31 +7,29 @@ static nvram_t *instance = NULL;
 
 void nvram_read()
 {
-	printf("nvram_read()\n");
+  printf("nvram_read()\n");
 }
 
 void nvram_write()
 {
-	printf("nvram_write()\n");
+  printf("nvram_write()\n");
 }
 
-
-nvram_t* get_nvram(void) {
-	return instance;
+nvram_t *get_nvram(void)
+{
+  return instance;
 }
 
 int nvram_init(void)
 {
-	printf("nvram_init %p\n", instance);
+  printf("nvram_init %p\n", instance);
 
-  if ( instance == NULL ) {
+  if (instance == NULL) {
     instance = malloc(sizeof(nvram_t));
     instance->read = nvram_read;
     instance->write = nvram_write;
-		printf("nvram_ini donet\n");
+    printf("nvram_ini donet\n");
   }
 
-	return 0;
+  return 0;
 }
-
-

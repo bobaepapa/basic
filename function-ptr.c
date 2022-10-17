@@ -1,27 +1,33 @@
 #include <stdio.h>
 
-typedef void (*func)(void);
+typedef void (*callback_type)(void);
 
-void callback(void) 
+void callback(void)
 {
-	printf("%s()\n", __func__);
+  printf(">> %s()\n", __func__);
+
+  return;
 }
 
-//void controller(func f)
-void controller(void (*f)())
+void need_callback(callback_type f)
 {
-	printf("%s()\n", __func__);
-	(*f)();
+  printf(">> %s()\n", __func__);
+  f();
 }
 
-
-int main() 
+int main(void)
 {
-	printf("%s()\n", __func__);
+  int var = 0;
+  int *pVar = &var;
 
-	printf("callback addr=%p\n", callback);
-	printf("&callback addr=%p\n", &callback);
-	controller(&callback);
+  printf(">> %s()\n", __func__);
 
-	return 0;
+  printf("callback=%p\n", callback);
+  printf("&callback=%p\n", &callback);
+
+  printf("&var=%p\n", &var);
+  printf("var2=%p\n", pVar);
+
+  need_callback(&callback);
+  return 0;
 }
