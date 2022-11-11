@@ -6,7 +6,7 @@ typedef struct nvram {
   void (*write)(void);
 } nvram_t;
 
-nvram_t *get_nvram();
-int nvram_init();
+nvram_t* get_nvram();
+int      nvram_init();
 
 #endif

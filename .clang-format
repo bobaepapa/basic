@@ -1,0 +1,12 @@
+---
+BasedOnStyle:  LLVM
+UseTab: Never
+IndentWidth: 2
+BreakBeforeBraces: Stroustrup
+AlignArrayOfStructures: Left
+ColumnLimit: 0
+PointerAlignment: Left
+AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+...

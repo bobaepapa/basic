@@ -10,22 +10,22 @@
 // char const *
 // char * const
 
-const char *const get_str0(void)
+const char* const get_str0(void)
 {
   return "hello 0";
 }
 
-char *const get_str1(void)
+char* const get_str1(void)
 {
   return "hello 1";
 }
 
-const char *get_str2(void)
+const char* get_str2(void)
 {
   return "hello 2";
 }
 
-char const *get_str3(void)
+char const* get_str3(void)
 {
   return "hello 3";
 }
@@ -41,32 +41,32 @@ int main()
 
   // log_info("Start\n");
 
-  const char *str1 = "I'm string.";
+  const char* str1 = "I'm string.";
   // str1 = "me too";
   // str1[2] = '1';
 
-  char *const str2 = "I'm string.";
+  char* const str2 = "I'm string.";
   // str2 = "me too";
   // str2[2] = '1';
 
-  const char *const str3 = "I'm string.";
+  const char* const str3 = "I'm string.";
   // str3 = "me too";
   // str3[2] = '1';
 
-  char const *str4 = "I'm string.";
+  char const* str4 = "I'm string.";
   // str4 = "me too";
   // str4[2] = '1';
 
-  const char *const a0 = get_str0();
+  const char* const a0 = get_str0();
   // a0 = "s";
   // a0[3] = 's';
   // printf("a0=%s\n", a0);
 
-  char *const a1 = get_str1();
+  char* const a1 = get_str1();
   // a1 = "s";
   // printf("a1=%s\n", a1);
 
-  const char *a2 = get_str2();
+  const char* a2 = get_str2();
   // a2[2] = 's';
   // printf("a2=%s\n", a2);
 

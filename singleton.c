@@ -13,9 +13,9 @@ void nvram_write()
   printf("nvram_write()\n");
 }
 
-nvram_t *get_nvram(void)
+nvram_t* get_nvram(void)
 {
-  static nvram_t *instance = NULL;
+  static nvram_t* instance = NULL;
 
   if (instance == NULL) {
     instance = malloc(sizeof(nvram_t));

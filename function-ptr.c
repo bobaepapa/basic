@@ -17,8 +17,8 @@ void need_callback(callback_type f)
 
 int main(void)
 {
-  int var = 0;
-  int *pVar = &var;
+  int  var = 0;
+  int* pVar = &var;
 
   printf(">> %s()\n", __func__);
 

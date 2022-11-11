@@ -4,14 +4,14 @@
 
 int read_test()
 {
-  nvram_t *my_nvram = get_nvram();
+  nvram_t* my_nvram = get_nvram();
   my_nvram->read();
   return 1;
 }
 
 void write_test()
 {
-  nvram_t *my_nvram = get_nvram();
+  nvram_t* my_nvram = get_nvram();
   my_nvram->write();
 }
 

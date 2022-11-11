@@ -11,9 +11,15 @@ endif
 
 #OBJS:= singleton-safe.o main.o
 #OBJS:= function-ptr.o
-OBJS:= log_debug.o
+#OBJS:= log_debug.o
+#OBJS:= flash-main.o flash-layer.o
+#OBJS:= struct.o
+OBJS:= overflow.o
 
-TARGET:= $(basename $(OBJS))
+#TARGET:= $(basename $(OBJS))
+
+
+TARGET:=overflow
 
 $(TARGET): $(OBJS)
 	@echo Builing... $(TARGET)

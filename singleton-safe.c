@@ -3,7 +3,7 @@
 
 #include "singleton.h"
 
-static nvram_t *instance = NULL;
+static nvram_t* instance = NULL;
 
 void nvram_read()
 {
@@ -15,7 +15,7 @@ void nvram_write()
   printf("nvram_write()\n");
 }
 
-nvram_t *get_nvram(void)
+nvram_t* get_nvram(void)
 {
   return instance;
 }

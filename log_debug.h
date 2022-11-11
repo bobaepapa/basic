@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#define LOG_LEVEL 4
+#define LOG_LEVEL  4
 #define PRINT_FUNC printf
 
 #define log_error(fmt, ...)                                                \

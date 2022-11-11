@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static const char *const data_rx_commands[] = {
+static const char* const data_rx_commands[] = {
     "RemoteStartTransaction",
     "RemoteCancelTransaction",
     "RemoteStopTransactionRequest",
