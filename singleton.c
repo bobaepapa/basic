@@ -18,8 +18,8 @@ nvram_t* get_nvram(void)
   static nvram_t* instance = NULL;
 
   if (instance == NULL) {
-    instance = malloc(sizeof(nvram_t));
-    instance->read = nvram_read;
+    instance        = malloc(sizeof(nvram_t));
+    instance->read  = nvram_read;
     instance->write = nvram_write;
   }
   return instance;

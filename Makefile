@@ -29,6 +29,10 @@ clean:
 	@echo Cleaning... $(TARGET) $(OBJS)
 	@$(RM) -f $(TARGET) $(OBJS) $(TARGET).map
 
+clang:
+	@echo Code Formatting... $(wildcard *.c) $(wildcard *.h)
+	@find -E . -regex '.+\.[ch]' -exec clang-format -style file -i {} \;
+		
 %o: %c
 	@$(CC) -c $< 
 

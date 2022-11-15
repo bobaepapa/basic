@@ -25,8 +25,8 @@ int nvram_init(void)
   printf("nvram_init %p\n", instance);
 
   if (instance == NULL) {
-    instance = malloc(sizeof(nvram_t));
-    instance->read = nvram_read;
+    instance        = malloc(sizeof(nvram_t));
+    instance->read  = nvram_read;
     instance->write = nvram_write;
     printf("nvram_ini donet\n");
   }
