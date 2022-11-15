@@ -6,7 +6,8 @@ BreakBeforeBraces: Stroustrup
 AlignArrayOfStructures: Left
 ColumnLimit: 0
 PointerAlignment: Left
-AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveAssignments: Consecutive
 AlignConsecutiveBitFields: Consecutive
 AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
 ...

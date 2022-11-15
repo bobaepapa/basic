@@ -1,6 +1,7 @@
 CC:=gcc
 LD:=ld
 RM:=rm
+
 ifeq ($(shell uname -s), Darwin)
 	LDOPTIONS=-Wl,-map,$(TARGET).map
 else
@@ -8,18 +9,17 @@ else
 endif
 
 #OBJS:= $(patsubst %.c,%.o,$(wildcard *.c))
+#TARGET:= $(basename $(OBJS))
 
 #OBJS:= singleton-safe.o main.o
 #OBJS:= function-ptr.o
 #OBJS:= log_debug.o
 #OBJS:= flash-main.o flash-layer.o
 #OBJS:= struct.o
-OBJS:= overflow.o
+#OBJS:= overflow.o
+OBJS:= hexdump.o
 
-#TARGET:= $(basename $(OBJS))
-
-
-TARGET:=overflow
+TARGET:=basic
 
 $(TARGET): $(OBJS)
 	@echo Builing... $(TARGET)
