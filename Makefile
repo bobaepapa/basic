@@ -18,8 +18,9 @@ endif
 #OBJS:= struct.o
 #OBJS:= overflow.o
 OBJS:= hexdump.o
+#OBJS:= sizeof.o
 
-TARGET:=basic
+TARGET:=run
 
 $(TARGET): $(OBJS)
 	@echo Builing... $(TARGET)
