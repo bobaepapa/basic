@@ -17,18 +17,22 @@ endif
 #OBJS:= flash-main.o flash-layer.o
 #OBJS:= struct.o
 #OBJS:= overflow.o
-OBJS:= hexdump.o
+#OBJS:= hexdump.o
 #OBJS:= sizeof.o
+#OBJS:= switch.o
+#OBJS:= array.o
+#OBJS:= func-ptrs.o func-body.o
+OBJS:= string.o
 
 TARGET:=run
 
 $(TARGET): $(OBJS)
 	@echo Builing... $(TARGET)
-	@$(CC) -o $@ $^ $(LDOPTIONS)
+	$(CC) -o $@ $^ $(LDOPTIONS)
 
 clean:
 	@echo Cleaning... $(TARGET) $(OBJS)
-	@$(RM) -f $(TARGET) $(OBJS) $(TARGET).map
+	$(RM) -f $(TARGET) $(OBJS) $(TARGET).map
 
 clang:
 	@echo Code Formatting... $(wildcard *.c) $(wildcard *.h)
