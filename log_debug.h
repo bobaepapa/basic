@@ -30,12 +30,12 @@
     }                                                      \
   } while (0)
 
-#define log_debug(fmt, ...)                                \
-  do {                                                     \
-    if (LOG_LEVEL > 2) {                                   \
+#define log_debug(fmt, ...)                     \
+  do {                                          \
+    if (LOG_LEVEL > 2) {                        \
       PRINT_FUNC("[DBUG] " fmt, ##__VA_ARGS__); \
-      PRINT_FUNC("\n");                                    \
-    }                                                      \
+      PRINT_FUNC("\n");                         \
+    }                                           \
   } while (0)
 
 #define log_trace(fmt, ...)                                                                          \

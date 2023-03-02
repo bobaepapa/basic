@@ -12,6 +12,7 @@ endif
 #TARGET:= $(basename $(OBJS))
 
 OBJS := log_debug.o
+
 #OBJS += singleton-safe.o main.o
 #OBJS += function-ptr.o
 #OBJS += log_debug.o
