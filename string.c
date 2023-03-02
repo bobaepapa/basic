@@ -2,25 +2,41 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "log_debug.h"
 
-char str_date[24];
+char str_date[24] = {
+  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+};
 
 int main()
 {
-  printf("Start\n");
+  log_warn("Start");
   
   char* iso_date = "2016-10-27T17:13:40Z";
 
-  printf("iso_date=%s\n", iso_date);
-  printf("iso_date sizeof =%d\n", sizeof(iso_date));
-  printf("iso_date strlen =%d\n", strlen(iso_date));
+  log_info("iso_date=%s", iso_date);
+  log_dump(iso_date, 24);
+
+  log_info("iso_date sizeof: %lu", sizeof(iso_date));
+  log_info("iso_date strlen: %lu", strlen(iso_date));
+
+
+  log_debug("before copy");
+  log_dump(str_date, 32);
+
+  memset(str_date, 0, sizeof(str_date));
 
   strncpy(str_date, iso_date, strlen(iso_date));
 
-  printf("str_date=%s\n", str_date);
-  printf("str_date sizeof =%d\n", sizeof(str_date));
-  printf("str_date strlen =%d\n", strlen(str_date));
+  log_debug("after copy");
+  log_dump(str_date, 32);
 
-  printf("End\n");
+  log_info("str_date=%s", str_date);
+  log_info("str_date sizeof: %lu", sizeof(str_date));
+  log_info("str_date strlen: %lu", strlen(str_date));
+
+  log_warn("End");
   return 0;
 }

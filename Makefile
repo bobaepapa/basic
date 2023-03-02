@@ -11,18 +11,19 @@ endif
 #OBJS:= $(patsubst %.c,%.o,$(wildcard *.c))
 #TARGET:= $(basename $(OBJS))
 
-#OBJS:= singleton-safe.o main.o
-#OBJS:= function-ptr.o
-#OBJS:= log_debug.o
-#OBJS:= flash-main.o flash-layer.o
-#OBJS:= struct.o
-#OBJS:= overflow.o
-#OBJS:= hexdump.o
-#OBJS:= sizeof.o
-#OBJS:= switch.o
-#OBJS:= array.o
-#OBJS:= func-ptrs.o func-body.o
-OBJS:= string.o
+OBJS := log_debug.o
+#OBJS += singleton-safe.o main.o
+#OBJS += function-ptr.o
+#OBJS += log_debug.o
+#OBJS += flash-main.o flash-layer.o
+#OBJS += struct.o
+#OBJS += overflow.o
+#OBJS += hexdump.o
+#OBJS += sizeof.o
+#OBJS += switch.o
+#OBJS += array.o
+#OBJS += func-ptrs.o func-body.o
+OBJS += string.o
 
 TARGET:=run
 
