@@ -1,6 +1,5 @@
+#include "log_debug.h"
 #include "singleton.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int read_test()
 {

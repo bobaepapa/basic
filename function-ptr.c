@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "log_debug.h"
 
 typedef void (*callback_type)(void);
 

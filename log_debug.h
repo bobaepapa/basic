@@ -2,6 +2,9 @@
 #define _DEBUG_LOG_H_
 
 #include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define LOG_LEVEL  4
 #define PRINT_FUNC printf

@@ -1,7 +1,7 @@
+#include "log_debug.h"
 #include "flash-layer.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+
 
 static struct my_flash* flash_inst = NULL;
 

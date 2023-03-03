@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "log_debug.h"
 
 char str_date[24] = {
@@ -47,6 +43,7 @@ int main()
   log_dump(str_date, 32);
 
   memset(str_date, 0, sizeof(str_date));
+  log_dump(str_date, 32);
 
   strncpy(str_date, iso_date, strlen(iso_date));
 

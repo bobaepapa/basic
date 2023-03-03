@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "log_debug.h"
 
 extern int (*func_ptrs[])(int, int);
 

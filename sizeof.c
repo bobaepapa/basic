@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "log_debug.h"
 
 void calc_len(void* buf)
 {

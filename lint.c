@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "log_debug.h"
 
 static const char* const data_rx_commands[] = {
     "RemoteStartTransaction",

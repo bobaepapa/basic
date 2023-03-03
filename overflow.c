@@ -1,5 +1,4 @@
-#include <stdint.h>
-#include <stdio.h>
+#include "log_debug.h"
 
 #define ADC_REFERENCE_VOLTAGE_MILLI 600u   /* 0.6V */
 #define ADC_VALUE_RESOLUTION        16384u /* 14-bit */

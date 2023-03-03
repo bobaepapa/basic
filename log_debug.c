@@ -1,7 +1,3 @@
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-
 #include "log_debug.h"
 
 #ifndef HEXDUMP_COLS

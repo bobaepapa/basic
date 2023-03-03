@@ -1,3 +1,4 @@
+#include "log_debug.h"
 #include "flash-layer.h"
 
 int main(void)
