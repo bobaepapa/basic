@@ -1,5 +1,5 @@
-#include "log_debug.h"
 #include "flash-layer.h"
+#include "log_debug.h"
 
 int main(void)
 {
