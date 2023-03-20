@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 #include "singleton.h"
 
 static nvram_t* instance = NULL;

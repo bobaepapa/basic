@@ -6,11 +6,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #define LOG_LEVEL  4
 #define PRINT_FUNC printf
 
-#define log_error(fmt, ...)                                                \
+#define error(fmt, ...)                                                \
   do {                                                                     \
     if (LOG_LEVEL > 0) {                                                   \
       PRINT_FUNC("[\e[41mEROR\e[0m] %s(): " fmt, __func__, ##__VA_ARGS__); \
@@ -18,7 +19,7 @@
     }                                                                      \
   } while (0)
 
-#define log_warn(fmt, ...)                                                 \
+#define warn(fmt, ...)                                                 \
   do {                                                                     \
     if (LOG_LEVEL > 0) {                                                   \
       PRINT_FUNC("[\e[44mWARN\e[0m] %s(): " fmt, __func__, ##__VA_ARGS__); \
@@ -26,7 +27,7 @@
     }                                                                      \
   } while (0)
 
-#define log_info(fmt, ...)                                 \
+#define info(fmt, ...)                                 \
   do {                                                     \
     if (LOG_LEVEL > 1) {                                   \
       PRINT_FUNC("[\e[32mINFO\e[0m] " fmt, ##__VA_ARGS__); \
@@ -34,7 +35,7 @@
     }                                                      \
   } while (0)
 
-#define log_debug(fmt, ...)                     \
+#define debug(fmt, ...)                     \
   do {                                          \
     if (LOG_LEVEL > 2) {                        \
       PRINT_FUNC("[DBUG] " fmt, ##__VA_ARGS__); \
@@ -42,7 +43,7 @@
     }                                           \
   } while (0)
 
-#define log_trace(fmt, ...)                                                                          \
+#define trace(fmt, ...)                                                                          \
   do {                                                                                               \
     if (LOG_LEVEL > 3) {                                                                             \
       PRINT_FUNC("[\e[35mTRAC\e[0m] %s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, ##__VA_ARGS__); \
@@ -50,6 +51,6 @@
     }                                                                                                \
   } while (0)
 
-void log_dump(void* mem, unsigned int len);
+void dump(void* mem, unsigned int len);
 
 #endif
