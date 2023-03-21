@@ -24,8 +24,8 @@ OBJS := log_debug.o
 #OBJS += switch.o
 #OBJS += array.o
 #OBJS += func-ptrs.o func-body.o
-#OBJS += string.o
-OBJS += pointer.o
+OBJS += string.o
+#OBJS += pointer.o
 
 TARGET:=run
 

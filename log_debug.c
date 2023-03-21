@@ -6,7 +6,7 @@
 
 #if 1
 #define HEXDUMP_MAXLEN 80
-void log_dump(void* mem, unsigned int len)
+void dump(void* mem, unsigned int len)
 {
   char     buf[HEXDUMP_MAXLEN];
   unsigned index;

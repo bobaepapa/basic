@@ -16,17 +16,17 @@ int main()
   uint32_t buf[20] = {
       1,
   };
-  printf("hello\n");
+  warn("hello\n");
 
   for (i = 0; i < 20; i++) {
-    printf("%02X ", buf[i]);
+    info("%02X ", buf[i]);
   }
-  printf("\n");
+  info("\n");
 
   copy_test(buf);
 
   for (i = 0; i < 20; i++) {
-    printf("%02X ", buf[i]);
+    info("%02X ", buf[i]);
   }
   return 0;
 }
