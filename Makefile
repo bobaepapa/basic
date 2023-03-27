@@ -13,7 +13,7 @@ endif
 
 OBJS := log_debug.o
 
-#OBJS += singleton-safe.o main.o
+#OBJS += singleton-safe.o singleton-main.o
 #OBJS += function-ptr.o
 #OBJS += log_debug.o
 #OBJS += flash-main.o flash-layer.o
@@ -24,8 +24,9 @@ OBJS := log_debug.o
 #OBJS += switch.o
 #OBJS += array.o
 #OBJS += func-ptrs.o func-body.o
-OBJS += string.o
+#OBJS += string.o
 #OBJS += pointer.o
+OBJS += calling.o
 
 TARGET:=run
 
