@@ -26,7 +26,8 @@ OBJS := log_debug.o
 #OBJS += func-ptrs.o func-body.o
 #OBJS += string.o
 #OBJS += pointer.o
-OBJS += calling.o
+#OBJS += calling.o
+OBJS += boolean.o
 
 TARGET:=run
 
