@@ -27,7 +27,9 @@ OBJS := log_debug.o
 #OBJS += string.o
 #OBJS += pointer.o
 #OBJS += calling.o
-OBJS += boolean.o
+#OBJS += boolean.o
+#OBJS += memcmp.o
+OBJS += iso8601.o
 
 TARGET:=run
 
@@ -37,7 +39,7 @@ $(TARGET): $(OBJS)
 
 clean:
 	@echo Cleaning... $(TARGET) $(OBJS)
-	$(RM) -f $(TARGET) $(OBJS) $(TARGET).map
+	$(RM) -f $(TARGET) $(OBJS) $(TARGET).map *.o
 
 clang:
 	@echo Code Formatting... $(wildcard *.c) $(wildcard *.h)
