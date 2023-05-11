@@ -18,7 +18,7 @@ OBJS := log_debug.o
 #OBJS += log_debug.o
 #OBJS += flash-main.o flash-layer.o
 #OBJS += struct.o
-#OBJS += overflow.o
+OBJS += overflow.o
 #OBJS += hexdump.o
 #OBJS += sizeof.o
 #OBJS += switch.o
@@ -29,7 +29,7 @@ OBJS := log_debug.o
 #OBJS += calling.o
 #OBJS += boolean.o
 #OBJS += memcmp.o
-OBJS += iso8601.o
+#OBJS += iso8601.o
 
 TARGET:=run
 
