@@ -30,7 +30,8 @@ OBJS := logging.o
 #OBJS += boolean.o
 #OBJS += memcmp.o
 #OBJS += iso8601.o
-OBJS += strlen.o
+#OBJS += strlen.o
+OBJS += typedef_p.o
 
 TARGET:=run
 
