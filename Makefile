@@ -31,7 +31,9 @@ OBJS := logging.o
 #OBJS += memcmp.o
 #OBJS += iso8601.o
 #OBJS += strlen.o
-OBJS += typedef_p.o
+#OBJS += typedef_p.o
+#OBJS += macro.o
+OBJS += float_to_byte.o
 
 TARGET:=run
 
