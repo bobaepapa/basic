@@ -17,23 +17,27 @@ OBJS := logging.o
 #OBJS += function-ptr.o
 #OBJS += log_debug.o
 #OBJS += flash-main.o flash-layer.o
-#OBJS += struct.o
+OBJS += struct.o
 #OBJS += overflow.o
 #OBJS += hexdump.o
-#OBJS += sizeof.o
+# OBJS += sizeof.o
 #OBJS += switch.o
 #OBJS += array.o
 #OBJS += func-ptrs.o func-body.o
-#OBJS += string.o
+# OBJS += string.o
 #OBJS += pointer.o
+# OBJS += char-pointer.o
 #OBJS += calling.o
 #OBJS += boolean.o
 #OBJS += memcmp.o
 #OBJS += iso8601.o
-#OBJS += strlen.o
+# OBJS += strlen.o
 #OBJS += typedef_p.o
 #OBJS += macro.o
-OBJS += float_to_byte.o
+#OBJS += float_to_byte.o
+# OBJS += print.o
+# OBJS += gen_buf.o
+ 
 
 TARGET:=run
 
@@ -51,6 +55,9 @@ clang:
 		
 %o: %c
 	@$(CC) -c $< 
+
+test:
+	@echo '"Hello Hi"'
 
 .PHONY: clean
 

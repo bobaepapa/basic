@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "common.h"
 
 // void f(char* userInput) {
 //	printf("%s", userInput);
@@ -30,6 +29,13 @@ char const* get_str3(void)
   return "hello 3";
 }
 
+const char* const selectedChargingProtocol_strings[] = {
+    "DIN SPEC 70121:2014",
+    "ISO 15118-2:2013",
+    "ISO 15118-2:2016",
+};
+#define NUM_ARRAY(x)                  (sizeof(x) / sizeof(x[0]))
+
 int main()
 {
   // unsigned char buf[8] = { 0x12, 0x23,};
@@ -40,6 +46,12 @@ int main()
   // view the stack or a memory at any location, by executing code equivalent to:
 
   // log_info("Start\n");
+
+  info("1 %s", selectedChargingProtocol_strings[0]);
+  info("2 %s", selectedChargingProtocol_strings[1]);
+  info("sizeof %ld", sizeof(selectedChargingProtocol_strings[0]));
+  info("sizeof %ld", NUM_ARRAY(selectedChargingProtocol_strings));
+  info("sizeof %ld", sizeof(selectedChargingProtocol_strings)/sizeof(selectedChargingProtocol_strings[0]));
 
   const char* str1 = "I'm string.";
   // str1 = "me too";
