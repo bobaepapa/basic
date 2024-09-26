@@ -13,11 +13,11 @@ endif
 
 OBJS := logging.o
 
-#OBJS += singleton-safe.o singleton-main.o
+OBJS += singleton-safe.o singleton-main.o
 #OBJS += function-ptr.o
 #OBJS += log_debug.o
 #OBJS += flash-main.o flash-layer.o
-OBJS += struct.o
+#OBJS += struct.o
 #OBJS += overflow.o
 #OBJS += hexdump.o
 # OBJS += sizeof.o

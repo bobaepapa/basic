@@ -1,4 +1,4 @@
-#include "log_debug.h"
+#include "common.h"
 #include "singleton.h"
 
 int read_test()
